@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saturn's Well — Acesso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Sora:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Image com Overlay -->
+  <div class="bg-overlay"></div>
+
+  <header class="navbar">
+    <div class="logo">
+      <!-- SVG Simples de Saturno -->
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+        <circle cx="12" cy="12" r="6" />
+        <path d="M2 12C2 12 5 15 12 15C19 15 22 12 22 12" />
+        <path d="M22 12C22 12 19 9 12 9C5 9 2 12 2 12" />
+      </svg>
+      <span>Saturn's Well</span>
+    </div>
+  </header>
+
+  <main id="app-container">
+    <!-- TELA DE LOGIN (Padrão) -->
+    <section id="screen-login" class="screen active">
+      <div class="glass-card">
+        <h1>Entrar</h1>
+        <p class="subtitle">Inicie sua jornada para o poço de Saturno.</p>
+        
+        <div id="msg-login" class="alert"></div>
+
+        <form id="form-login">
+          <div class="input-group">
+            <label>E-mail</label>
+            <input type="email" id="login-email" placeholder="astronauta@espaco.com" required>
+          </div>
+          <div class="input-group">
+            <label>Senha</label>
+            <input type="password" id="login-senha" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="btn-stellar">Acessar Sistema</button>
+        </form>
+        <p class="footer-text">Não tem conta? <a href="#" id="go-to-register">Criar conta</a></p>
+      </div>
+    </section>
+
+    <!-- TELA DE CADASTRO -->
+    <section id="screen-register" class="screen">
+      <div class="glass-card">
+        <h1>Nova Conta</h1>
+        <p class="subtitle">Registre suas credenciais de acesso.</p>
+        <div id="msg-register" class="alert"></div>
+        <form id="form-register">
+          <div class="input-group">
+            <label>E-mail</label>
+            <input type="email" id="reg-email" placeholder="astronauta@espaco.com" required>
+          </div>
+          <div class="input-group">
+            <label>Senha</label>
+            <input type="password" id="reg-senha" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="btn-stellar">Cadastrar</button>
+        </form>
+        <p class="footer-text">Já é membro? <a href="#" id="go-to-login">Fazer Login</a></p>
+      </div>
+    </section>
+
+    <!-- TELA DE SUCESSO (PAINEL) -->
+    <section id="screen-dashboard" class="screen">
+      <div class="glass-card success-card">
+        <div class="check-icon">✓</div>
+        <h1>Conexão Estabelecida</h1>
+        <p class="subtitle">Bem-vindo a bordo do Saturn's Well.</p>
+        <div class="user-badge">
+          Identificado como: <strong id="user-email">...</strong>
+        </div>
+        <button id="btn-logout" class="btn-stellar">Encerrar Sessão</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
